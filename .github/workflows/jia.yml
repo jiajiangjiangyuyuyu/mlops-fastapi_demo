@@ -5,7 +5,7 @@ on:
 
 jobs:
   npm-build:
-    nmae: npm-build工作
+    name: npm-build工作
     runs-on: ubuntu-latest
 
     steps:
@@ -15,5 +15,5 @@ jobs:
     - name: 安装依赖
       run: npm install
     
-    - nmae: 项目打包
+    - name: 项目打包
       run: npm run build
