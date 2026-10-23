@@ -3,9 +3,8 @@ on:
 
 jobs:
   npm-build:
-    run-on: ubuntu_latest
+    run-on: ubuntu-latest
     steps:
-    - run: pwd
-    - run: npm --version
+    - uses: actions/checkout@v4
     - run: npm install
     - run: npm run build
