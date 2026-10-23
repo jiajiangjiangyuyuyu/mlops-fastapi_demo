@@ -1,10 +1,19 @@
+name: 打包Reach项目
+
 on:
   push:
 
 jobs:
   npm-build:
+    nmae: npm-build工作
     runs-on: ubuntu-latest
+
     steps:
-    - uses: actions/checkout@v4
-    - run: npm install
-    - run: npm run build
+    - name: 读取其他仓库
+      uses: actions/checkout@v4
+
+    - name: 安装依赖
+      run: npm install
+    
+    - nmae: 项目打包
+      run: npm run build
