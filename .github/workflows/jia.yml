@@ -22,7 +22,7 @@ jobs:
       run: npm run build
 
     - name: 部署
-      uses: JmaeIves/github-pages-deploy-actions@v4
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         branch: gh-pages
         folder: dist
