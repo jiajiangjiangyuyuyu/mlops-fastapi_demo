@@ -3,6 +3,9 @@ name: 打包Reach项目
 on:
   push:
 
+permissions:
+  contents: write
+
 jobs:
   npm-build:
     name: npm-build工作
@@ -17,3 +20,9 @@ jobs:
     
     - name: 项目打包
       run: npm run build
+
+    - name: 部署
+      uses: JmaeIves/github-pages-deploy-actions@v4
+      with:
+        branch: gh-pages
+        folder: dist
