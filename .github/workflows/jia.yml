@@ -20,5 +20,7 @@ jobs:
     - name: 构建镜像并推给docker hub
       uses: docker/build-push-action@v5
       with: 
+        context: .
+        file: ./src/Dockerfile
         push: true
         tags: jiajiangjiangyuyuyu/react-app:latest
